@@ -155,7 +155,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
   ![紅燈恆亮](docs/燈號_RED_LED_ON.jpg)
 
 * **紅燈閃爍（倒數最後 10 秒警示）**：
-  ![紅燈閃爍](docs/紅燈閃爍](docs/燈號_RED_LED__FLASH.jpg)
+  ![紅燈閃爍](docs/燈號_RED_LED__FLASH.jpg)
 
 ### 流程圖文字說明：
 1. **IDLE（待機狀態）**：系統初始狀態，等待使用者透過電腦端發送指令或按下板載 `B1` 按鈕（PC13）啟動。
