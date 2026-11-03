@@ -127,20 +127,15 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 
 ## 🔀 系統狀態流程圖與說明 (State Machine Flow)
 
-[ STATE_IDLE ]
-(待機狀態)
-     │
-     ▼ [按 B1 / 接收指令]
-[ STATE_EXERCISE ]
-(運動狀態：綠燈恆亮)
-     │
-     ▼ [時間歸零]
-[ STATE_REST ]
-(休息狀態：紅燈/閃爍/蜂鳴器)
-     │
-     ├─ [尚未完成組數] ──> 回到運動狀態
-     │
-     └─ [組數執行完畢] ──> 結束訓練切回 IDLE
+[ STATE_IDLE ]（待機狀態）
+  │
+  ▼ [按 B1 / 接收指令]
+[ STATE_EXERCISE ]（運動狀態：綠燈恆亮）
+  │
+  ▼ [時間歸零]
+[ STATE_REST ]（休息狀態：紅燈 / 閃爍 / 蜂鳴器）
+  ├── [尚未完成組數] ──> 回到運動狀態
+  └── [組數執行完畢] ──> 結束訓練切回 IDLE
 
 ### 流程圖文字說明：
 1. **IDLE（待機狀態）**：系統初始狀態，等待使用者透過電腦端發送指令或按下板載 `B1` 按鈕（PC13）啟動。
