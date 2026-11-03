@@ -137,6 +137,26 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 > &nbsp;&nbsp;&nbsp;&nbsp;├── [尚未完成組數] ──> 回到運動狀態<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;└── [組數執行完畢] ──> 結束訓練切回 IDLE
 
+
+### 硬體實作與外觀
+
+> 這裡展示了 STM32G474RE HIIT 碼錶專案的實體接線與運作狀態：
+
+* **全景與外觀**：
+  ![全景](docs/全景.jpg)
+
+* **特寫鏡頭**：
+  ![特寫](docs/特寫.jpg)
+
+* **綠燈恆亮（運動狀態 EXERCISE）**：
+  ![綠燈恆亮](docs/燈號_GREEN_LED_ON.jpg)
+
+* **紅燈恆亮（進入休息狀態 REST）**：
+  ![紅燈恆亮](docs/燈號_RED_LED_ON.jpg)
+
+* **紅燈閃爍（倒數最後 10 秒警示）**：
+  ![紅燈閃爍](docs/紅燈閃爍](docs/燈號_RED_LED__FLASH.jpg)
+
 ### 流程圖文字說明：
 1. **IDLE（待機狀態）**：系統初始狀態，等待使用者透過電腦端發送指令或按下板載 `B1` 按鈕（PC13）啟動。
 2. **EXERCISE（運動狀態）**：按下按鈕後進入此狀態，綠燈（PA5）恆亮，開始倒數運動秒數。
